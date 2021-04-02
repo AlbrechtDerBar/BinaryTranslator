@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Binary Translator</title>
+        <script src="binary.js"></script>
+    </head>
+    <body>
+        <label for="input-lang">Input:</label>
+            <select name="input-lang" id="input-lang">
+                <option value="english">English</option>
+                <option value="binary">Binary</option>
+                <option value="hex">Hexadecimal</option>
+            </select>
+            <br>
+        <textarea name="input" id="input" cols="30" rows="10" oninput="input()"></textarea>
+        <br>
+
+        <label for="output-lang">Output:</label>
+        <select name="output-lang" id="output-lang">
+            <option value="english">English</option>
+            <option value="binary">Binary</option>
+            <option value="hex">Hexadecimal</option>
+        </select>
+        <br>
+        <textarea name="output" id="output" cols="30" rows="10"></textarea>
+    </body>
+</html>
