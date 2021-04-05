@@ -9,14 +9,28 @@ function input() {
 }
 
 function binary(text) {
+ let output = 0;
+    for(i = 0; i < text.length; i++) {
+        if (text.charAt(i) == "1") {
+            output += Math.pow(2, (text.length - (i + 1)));
+        }
+        else {
+            continue;
+        }
+    }
+
+    return output
+}
+
+function hex(text) {
 
 }
 
-function hex() {
+function english(text) {
 
 }
 
-function english() {
+function decimal(text) {
 
 }
 
