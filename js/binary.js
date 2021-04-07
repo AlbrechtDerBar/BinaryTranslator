@@ -46,7 +46,12 @@ function binary(text) {
         for(i=0;i<bytes;i++) {
             let dec = 0;
             for(j=0;j<8;j++) {
-                result = Math.pow(2, (8 - (j + 1)));
+                if (text.charAt((i*8) + j) == "1") {
+                    result = Math.pow(2, (8 - (j + 1)));
+                }
+                else {
+                    continue;
+                }
                 dec += result;
                 output[i] = i+ ": "+dec;
             }
