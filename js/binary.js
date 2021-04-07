@@ -13,35 +13,6 @@ function binary(text) {
     let bytes = Math.floor(text.length / 8);
     let bits = text.length % 8;
     let result = 0;
-        // if (bytes == 0) {
-        //     for(let i=0; i < text.length; i++) {
-        //         result = Math.pow(2, (text.length - ((bytes*8 + i) + 1)));
-        //         dec += result;
-        //     }
-        // }
-        // else {
-        //     for(let i=0; i < bytes; i++) {
-        //         alert("I: " +i)
-        //         for(let j=0; j < 8; j++) {
-        //             alert(j + " " + output)
-        //             if (text.charAt((i*8 + j)) == "1") {
-        //                 result = Math.pow(2, (text.length - ((i*8 + j) + 1)));
-        //                 dec += result
-        //                 output[i] = dec;
-        //             }
-        //             else {
-        //                 continue;
-        //             }
-        //         }
-        //         output.push(dec);
-        //         console.log(output)
-        //     }
-        //     for(let i=0; i < bits; i++) {
-        //         result = Math.pow(2, (text.length - ((bytes*8 + i) + 1)));
-        //         dec += result;
-        //         output[bytes+1] = dec;
-        //     }
-        // }
 
         for(i=0;i<bytes;i++) {
             let dec = 0;
@@ -53,7 +24,7 @@ function binary(text) {
                     continue;
                 }
                 dec += result;
-                output[i] = i+ ": "+dec;
+                output[i] = dec;
             }
         }
 
