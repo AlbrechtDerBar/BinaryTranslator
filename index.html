@@ -1,26 +1,36 @@
 <html>
     <head>
         <title>Binary Translator</title>
-        <script src="binary.js"></script>
+        <script src="js/hexArray.js"></script>
+        <script src="js/binary.js"></script>
     </head>
     <body>
         <label for="input-lang">Input:</label>
             <select name="input-lang" id="input-lang">
-                <option value="english">English</option>
-                <option value="binary">Binary</option>
-                <option value="hex">Hexadecimal</option>
+                <option value="english" id="IEnglish">English</option>
+                <option value="binary" id="IBinary">Binary</option>
+                <option value="hex" id="IHex">Hexadecimal</option>
+                <option value="decimal" id="IDecimal">Decimal</option>
             </select>
             <br>
         <textarea name="input" id="input" cols="30" rows="10" oninput="input()"></textarea>
         <br>
+        <div onload="test()" id="test"><script>
+            function test() {
+                let test = [65, 66];
+                document.getElementById("test").innerHTML = String.fromCharCode.apply(null, test)
+            }
+        </script></div>
 
         <label for="output-lang">Output:</label>
         <select name="output-lang" id="output-lang">
-            <option value="english">English</option>
-            <option value="binary">Binary</option>
-            <option value="hex">Hexadecimal</option>
+            <option value="english" id="OEnglish">English</option>
+            <option value="binary" id="OBinary">Binary</option>
+            <option value="hex" id="OHex">Hexadecimal</option>
+            <option value="decimal" id="ODecimal">Decimal</option>
         </select>
         <br>
         <textarea name="output" id="output" cols="30" rows="10"></textarea>
+        <button onclick="test()">debug</button>
     </body>
 </html>
